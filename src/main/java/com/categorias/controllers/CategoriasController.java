@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.Table;
+
 import com.example.actividad.interfaces.Categorias;
 import com.example.services.CategoriaServices;
 
@@ -25,6 +27,7 @@ import io.swagger.annotations.ApiOperation;
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping(value="/categorias")
+@Table(name="categoria")
 public class CategoriasController {
 	
 	@Autowired
